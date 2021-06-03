@@ -1,0 +1,88 @@
+// varibles
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+$base-color: #171717;
+// $base-color: black;
+$font-color: #fffde9d0;
+$nav-color:#fefefe;
+$font: 'Anton';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $base-color;
+}
+
+h1 {
+    color: $font-color;
+    font-family: $font;
+}
+
+.main-container {
+    padding-right: 500px;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.hero-section {
+    width: 50vw;
+    height: 100%;
+    background: url(../src/components/steve.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(100, 1%);
+    grid-template-rows: repeat(50, 2%);
+    width: 500vw;
+    height: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.gallery-helper {
+    grid-area: 43 / 1 / span 2 / span 1;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Syncopate', sans-serif;
+
+}
+
+.behind-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 7em;
+    font-weight: 700;
+
+    font-family: 'Syncopate', sans-serif;
+
+    &.fill {
+        color: $font-color;
+    }
+
+    &.outline {
+        z-index: 2;
+        mix-blend-mode: overlay;
+    }
+}
